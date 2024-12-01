@@ -1,0 +1,27 @@
+# Ignore Terraform state files, which can contain sensitive data
+*.tfstate
+*.tfstate.*
+
+# Ignore crash logs
+crash.log
+
+# Ignore .terraform directories, which store downloaded provider binaries
+.terraform/
+.terraform.lock.hcl
+
+# Ignore backup files created by Terraform
+*.tfbackup
+*.backup
+
+# Ignore plan output files, which can contain sensitive data
+*.tfplan
+
+# Ignore environment variables
+.env
+
+# Ignore service account keys and sensitive files
+*.json
+
+# Optional: Ignore IDE-specific files (e.g., for VSCode or IntelliJ)
+.vscode/
+.idea/
