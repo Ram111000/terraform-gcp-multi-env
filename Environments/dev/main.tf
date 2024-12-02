@@ -2,8 +2,8 @@ module "network" {
   source       = "../../modules/network"
   network_name = "gcpvpc"         # Your actual VPC name
   subnet_name  = "gcpsubnet"      # Your actual subnet name
-  cidr         = "10.0.0.0/24"   # Your actual CIDR block
-  region       = "us-west1"       # Your actual region
+  cidr         = "10.128.0.7"   # Your actual CIDR block
+  region       = "us-central1-a"       # Your actual region
 }
 
 resource "google_compute_instance" "vm_instance" {
@@ -20,3 +20,4 @@ resource "google_compute_instance" "vm_instance" {
     subnetwork = module.network.subnet_id
   }
 }
+
